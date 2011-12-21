@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <schema targetNamespace="http://tempuri.org/d.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+  xmlns:d="http://tempuri.org/d.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" schemaLocation="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/" schemaLocation="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <complexType name="EndpointReferenceType">
+   <sequence>
+     <element ref="wsa:Address" minOccurs="0" maxOccurs="1"/>
+   </sequence>
+  </complexType>
+  <complexType name="ProbeMatchType">
+   <sequence>
+     <element ref="wsa:EndpointReference" minOccurs="0" maxOccurs="1"/>
+     <element ref="d:Types" minOccurs="0" maxOccurs="1"/>
+     <element ref="d:Scopes" minOccurs="0" maxOccurs="1"/>
+     <element ref="d:XAddrs" minOccurs="0" maxOccurs="1"/>
+     <element ref="d:MetadataVersion" minOccurs="1" maxOccurs="1"/>
+   </sequence>
+  </complexType>
+  <element name="Types" type="xsd:string"/>
+  <element name="Scopes" type="xsd:string"/>
+  <element name="XAddrs" type="xsd:string"/>
+  <element name="MetadataVersion" type="xsd:unsignedInt"/>
+  <element name="ProbeMatch" type="d:ProbeMatchType"/>
+  <!-- operation request element -->
+  <element name="Probe">
+   <complexType>
+    <sequence>
+     <element ref="d:Types" minOccurs="0" maxOccurs="1"/>
+     <element ref="d:Scopes" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ProbeMatches">
+   <complexType>
+    <sequence>
+     <element ref="d:ProbeMatch" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+

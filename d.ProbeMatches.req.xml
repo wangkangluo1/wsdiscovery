@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+ xmlns:d="http://tempuri.org/d.xsd">
+ <SOAP-ENV:Header>
+  <wsa:MessageID></wsa:MessageID>
+  <wsa:RelatesTo RelationshipType=""></wsa:RelatesTo>
+  <wsa:To></wsa:To>
+  <wsa:Action></wsa:Action>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+  <d:ProbeMatches>
+   <d:ProbeMatch>
+    <wsa:EndpointReference>
+     <wsa:Address></wsa:Address>
+    </wsa:EndpointReference>
+    <d:Types></d:Types>
+    <d:Scopes></d:Scopes>
+    <d:XAddrs></d:XAddrs>
+    <d:MetadataVersion>0</d:MetadataVersion>
+   </d:ProbeMatch>
+  </d:ProbeMatches>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
